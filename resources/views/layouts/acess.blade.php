@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{--<title>{{ config('app.name', 'Rhaphs Company') }}</title>--}}
-    <title>@yield('title') - Rhaphs Company</title>
+    <title>@yield('title') - Finance</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">

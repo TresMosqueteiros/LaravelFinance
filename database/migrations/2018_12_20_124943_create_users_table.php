@@ -24,10 +24,10 @@ class CreateUsersTable extends Migration {
 			$table->string('status', 10)->nullable();
 			$table->integer('creator')->nullable();
 			$table->integer('editor')->nullable();
-			$table->date('last_activity')->nullable();
+			$table->date('last_activity')->nullable()->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
 			$table->integer('acess')->nullable();
-			$table->integer('lvl_acess');
-			$table->boolean('active');
+			$table->integer('lvl_acess')->default(1);
+			$table->boolean('active')->default(1);
 			$table->string('remember_token', 100)->nullable();
 			$table->timestamps();
 		});

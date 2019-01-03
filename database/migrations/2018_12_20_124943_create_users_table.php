@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration {
 			$table->string('status', 10)->nullable();
 			$table->integer('creator')->nullable();
 			$table->integer('editor')->nullable();
-			$table->date('last_activity')->nullable()->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+			$table->date('last_activity')->nullable()->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'))->nullable()->change();
 			$table->integer('acess')->nullable();
 			$table->integer('lvl_acess')->default(1);
 			$table->boolean('active')->default(1);
